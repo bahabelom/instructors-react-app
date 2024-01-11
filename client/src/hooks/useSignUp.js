@@ -21,7 +21,7 @@ export const useSignUp = () => {
   ) => {
     setisLoading(true);
     setError(null);
-    const response = await fetch("https://instructors-react-api2.vercel.app/api/users/signup", {
+    const response = await fetch("https://instructors-react-app.vercel.app/api/users/signup", {
       method: "POST",
       body: JSON.stringify({
         name,
