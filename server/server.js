@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 const corsOptions = {
   origion: "https://instructors-react-frontend.vercel.app",
-  methods:["POST","GET","PUT", "DELETE"]
+  methods:["POST","GET","PUT", "DELETE"],
   Credentials: true,
   optionSuccessStatus: 204,
 };
