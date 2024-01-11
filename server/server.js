@@ -11,10 +11,12 @@ const { default: mongoose } = require("mongoose");
 const app = express();
 // middleware
 app.use(express.json());
+
 const corsOptions = {
-  origion: "*",
-  Credentials: true,
-  optionSuccessStatus: 200,
+  origin: ['https://instructors-react-frontend.vercel.app'], // Allow your frontend URL
+  methods: ['POST', 'GET'], // Specify allowed methods
+  credentials: true, // Allow sending cookies (if applicable)
+  optionSuccessStatus: 200, // Optional: define response status for preflight requests (default: 204)
 };
 
 app.use((req, res, next) => {
@@ -32,7 +34,7 @@ app.use("/api/instructor", instructorRoutes);
 
 // Connect to a database
 mongoose
-  .connect(process.env.MONGO_URL_ATLAS)
+  .connect("mongodb+srv://bahabelom:godknows@cluster0.f4gpdsb.mongodb.net/")
   .then(() => {
     app.listen(process.env.PORT, () => {
       console.log(
