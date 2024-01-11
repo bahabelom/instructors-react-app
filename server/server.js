@@ -32,7 +32,8 @@ app.use("/api/instructor", instructorRoutes);
 
 // Connect to a database
 app.use("/s", mongoose
-  .connect("mongodb+srv://bahabelom:godknows@cluster0.f4gpdsb.mongodb.net/?retryWrites=true&w=majority")
+  .connect("mongodb+srv://bahabelom:<godknows>@cluster0.f4gpdsb.mongodb.net/?retryWrites=true&w=majority")
+            
   .then(() => {
     app.listen(process.env.PORT, () => {
       console.log(
