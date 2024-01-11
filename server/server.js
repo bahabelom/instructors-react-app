@@ -31,7 +31,7 @@ app.use("/api/course", courseRoutes);
 app.use("/api/instructor", instructorRoutes);
 
 // Connect to a database
-app.use("/s", mongoose
+app.use("/", mongoose
   .connect("mongodb+srv://bahabelom:godknows@cluster0.f4gpdsb.mongodb.net/?retryWrites=true&w=majority")
             
   .then(() => {
