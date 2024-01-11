@@ -44,6 +44,6 @@ app.use("/", mongoose
   })
   .catch((err) => {
     console.log(err);
-  }););
+  }));
 
 // listen for requests
