@@ -24,7 +24,7 @@ useEffect(() => {
       try {
        
          // Fetch only instructors with role "teacher"
-      const instructorsResponse = await axios.get('http://localhost:4000/api/users/getuser',{
+      const instructorsResponse = await axios.get('https://instructors-react-api2.vercel.app/api/users/getuser',{
       params: {
             role: 'teacher',
           },

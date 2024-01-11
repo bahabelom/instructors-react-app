@@ -13,10 +13,17 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
+<<<<<<< HEAD
   origin: ['https://instructors-react-frontend.vercel.app'], // Allow your frontend URL
   methods: ['POST', 'GET'], // Specify allowed methods
   credentials: true, // Allow sending cookies (if applicable)
   optionSuccessStatus: 200, // Optional: define response status for preflight requests (default: 204)
+=======
+  origion: "https://instructors-react-frontend.vercel.app",
+  methods:["POST","GET","PUT", "DELETE"],
+  Credentials: true,
+  optionSuccessStatus: 204,
+>>>>>>> origin/main
 };
 
 app.use((req, res, next) => {
@@ -35,6 +42,10 @@ app.use("/api/instructor", instructorRoutes);
 // Connect to a database
 mongoose
   .connect("mongodb+srv://bahabelom:godknows@cluster0.f4gpdsb.mongodb.net/")
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/main
   .then(() => {
     app.listen(process.env.PORT, () => {
       console.log(
@@ -46,4 +57,5 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
 // listen for requests
