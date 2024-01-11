@@ -12,7 +12,7 @@ const app = express();
 // middleware
 app.use(express.json());
 const corsOptions = {
-  origion: "*",
+  origion: ["https://instructors-react-frontend.vercel.app/"],
   Credentials: true,
   optionSuccessStatus: 200,
 };
